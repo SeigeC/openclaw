@@ -77,6 +77,33 @@
 <trans-unit id="s1928077a5b791c86">
   <source>Live tail of the gateway file logs.</source>
 </trans-unit>
+<trans-unit id="s7293d04c5979a8ad">
+  <source>Expand sidebar</source>
+</trans-unit>
+<trans-unit id="s8f10b4e57121e256">
+  <source>Collapse sidebar</source>
+</trans-unit>
+<trans-unit id="sf6026e85bd944e05">
+  <source>Gateway Dashboard</source>
+</trans-unit>
+<trans-unit id="sbaf0a7c417e388af">
+  <source>Health</source>
+</trans-unit>
+<trans-unit id="s091d3d07b5b3076f">
+  <source>OK</source>
+</trans-unit>
+<trans-unit id="scde3342a428aaee8">
+  <source>Offline</source>
+</trans-unit>
+<trans-unit id="sa93c79c575088852">
+  <source>Resources</source>
+</trans-unit>
+<trans-unit id="s1c64d13d82ee87da">
+  <source>Docs (opens in new tab)</source>
+</trans-unit>
+<trans-unit id="s036ffe7360826852">
+  <source>Docs</source>
+</trans-unit>
 </body>
 </file>
 </xliff>
