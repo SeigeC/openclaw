@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
 <file target-language="zh-CN" source-language="en" original="lit-localize-inputs" datatype="plaintext">
-<body/>
+<body>
+<trans-unit id="s1d318e9d0ccba86b">
+  <source>Chat</source>
+</trans-unit>
+<trans-unit id="s2dd2e77169a66d9e">
+  <source>Control</source>
+</trans-unit>
+<trans-unit id="s95416925fd51a346">
+  <source>Agent</source>
+</trans-unit>
+<trans-unit id="s9d8b8aa2b404c2c8">
+  <source>Settings</source>
+</trans-unit>
+<trans-unit id="s3d197283cb019b5a">
+  <source>Overview</source>
+</trans-unit>
+<trans-unit id="s37114ce595691035">
+  <source>Channels</source>
+</trans-unit>
+<trans-unit id="s2f4f955934b0c573">
+  <source>Instances</source>
+</trans-unit>
+<trans-unit id="s5c18cae48b93138c">
+  <source>Sessions</source>
+</trans-unit>
+<trans-unit id="s6708944714f91923">
+  <source>Cron Jobs</source>
+</trans-unit>
+<trans-unit id="s01b09ac2bd6fcb1f">
+  <source>Skills</source>
+</trans-unit>
+<trans-unit id="s8a0ee3d87938f19a">
+  <source>Nodes</source>
+</trans-unit>
+<trans-unit id="s606c6789a0e06b07">
+  <source>Config</source>
+</trans-unit>
+<trans-unit id="s96d2f1dc180a46d8">
+  <source>Debug</source>
+</trans-unit>
+<trans-unit id="s4f1ad6b48a5df506">
+  <source>Logs</source>
+</trans-unit>
+<trans-unit id="sc58e5de4fd33e26e">
+  <source>Gateway status, entry points, and a fast health read.</source>
+</trans-unit>
+<trans-unit id="s9adc7fb4231116aa">
+  <source>Manage channels and settings.</source>
+</trans-unit>
+<trans-unit id="se9fe8bb502675126">
+  <source>Presence beacons from connected clients and nodes.</source>
+</trans-unit>
+<trans-unit id="s1a41f8cceaf4301a">
+  <source>Inspect active sessions and adjust per-session defaults.</source>
+</trans-unit>
+<trans-unit id="sec15163f529ffa05">
+  <source>Schedule wakeups and recurring agent runs.</source>
+</trans-unit>
+<trans-unit id="s6ccf72b7e19c6ae9">
+  <source>Manage skill availability and API key injection.</source>
+</trans-unit>
+<trans-unit id="sbb1d81850813664a">
+  <source>Paired devices, capabilities, and command exposure.</source>
+</trans-unit>
+<trans-unit id="sdf11e6352e8a80d8">
+  <source>Direct gateway chat session for quick interventions.</source>
+</trans-unit>
+<trans-unit id="s417d6d83edb064ef">
+  <source>Edit ~/.openclaw/openclaw.json safely.</source>
+</trans-unit>
+<trans-unit id="sa65f1188a628df54">
+  <source>Gateway snapshots, events, and manual RPC calls.</source>
+</trans-unit>
+<trans-unit id="s1928077a5b791c86">
+  <source>Live tail of the gateway file logs.</source>
+</trans-unit>
+</body>
 </file>
 </xliff>
