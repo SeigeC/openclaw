@@ -104,6 +104,12 @@
 <trans-unit id="s036ffe7360826852">
   <source>Docs</source>
 </trans-unit>
+<trans-unit id="sefcf950b3cc4fc3b">
+  <source>Language</source>
+</trans-unit>
+<trans-unit id="s0be303ab09afb863">
+  <source>Select your preferred display language.</source>
+</trans-unit>
 </body>
 </file>
 </xliff>

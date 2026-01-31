@@ -1,9 +1,11 @@
 import { html } from "lit";
+import { msg } from "@lit/localize";
 
 import type { GatewayHelloOk } from "../gateway";
 import { formatAgo, formatDurationMs } from "../format";
 import { formatNextRun } from "../presenter";
 import type { UiSettings } from "../storage";
+import { getLocale, setLocale } from "../../localization";
 
 export type OverviewProps = {
   connected: boolean;
@@ -234,6 +236,30 @@ export function renderOverview(props: OverviewProps) {
               : "Disabled"}
         </div>
         <div class="muted">Next wake ${formatNextRun(props.cronNext)}</div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: 18px;">
+      <div class="card-title">${msg("Language")}</div>
+      <div class="card-sub">${msg("Select your preferred display language.")}</div>
+      <div style="margin-top: 14px;">
+        <select
+          class="select"
+          @change=${async (e: Event) => {
+            const select = e.target as HTMLSelectElement;
+            const newLocale = select.value;
+            const currentLocale = getLocale();
+            try {
+              await setLocale(newLocale, true);
+            } catch (err) {
+              console.error("Failed to set locale:", err);
+              select.value = currentLocale;
+            }
+          }}
+        >
+          <option value="en" ?selected=${getLocale() === "en"}>English</option>
+          <option value="zh-CN" ?selected=${getLocale() === "zh-CN"}>简体中文</option>
+        </select>
       </div>
     </section>
 
