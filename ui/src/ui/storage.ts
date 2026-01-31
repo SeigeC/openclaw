@@ -13,6 +13,7 @@ export type UiSettings = {
   splitRatio: number; // Sidebar split ratio (0.4 to 0.7, default 0.6)
   navCollapsed: boolean; // Collapsible sidebar state
   navGroupsCollapsed: Record<string, boolean>; // Which nav groups are collapsed
+  locale?: string; // User-selected locale (e.g., "en", "zh-CN")
 };
 
 export function loadSettings(): UiSettings {

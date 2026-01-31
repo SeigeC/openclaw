@@ -1,5 +1,6 @@
 import { LitElement, html, nothing } from "lit";
 import { customElement, state } from "lit/decorators.js";
+import { updateWhenLocaleChanges } from "@lit/localize";
 
 import type { GatewayBrowserClient, GatewayHelloOk } from "./gateway";
 import { resolveInjectedAssistantIdentity } from "./assistant-identity";
@@ -98,6 +99,11 @@ function resolveOnboardingMode(): boolean {
 
 @customElement("openclaw-app")
 export class OpenClawApp extends LitElement {
+  constructor() {
+    super();
+    updateWhenLocaleChanges(this);
+  }
+
   @state() settings: UiSettings = loadSettings();
   @state() password = "";
   @state() tab: Tab = "chat";

@@ -1,2 +1,6 @@
 import "./styles.css";
-import "./ui/app.ts";
+import { initLocale } from "./localization";
+
+// Initialize locale before loading the app
+await initLocale();
+await import("./ui/app.ts");
