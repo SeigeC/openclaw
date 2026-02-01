@@ -1,5 +1,7 @@
 import rawConfig from "./tool-display.json";
 import type { IconName } from "./icons";
+import { getToolLabel } from "./i18n/tool-labels";
+import { getLocale } from "../localization";
 
 type ToolDisplayActionSpec = {
   label?: string;
@@ -137,15 +139,18 @@ export function resolveToolDisplay(params: {
   const key = name.toLowerCase();
   const spec = TOOL_MAP[key];
   const icon = (spec?.icon ?? FALLBACK.icon ?? "puzzle") as IconName;
-  const title = spec?.title ?? defaultTitle(name);
-  const label = spec?.label ?? name;
+  const locale = getLocale();
+  const title = getToolLabel(`${key}.title`, locale) ?? spec?.title ?? defaultTitle(name);
+  const label = getToolLabel(`${key}.label`, locale) ?? spec?.label ?? name;
   const actionRaw =
     params.args && typeof params.args === "object"
       ? ((params.args as Record<string, unknown>).action as string | undefined)
       : undefined;
   const action = typeof actionRaw === "string" ? actionRaw.trim() : undefined;
   const actionSpec = resolveActionSpec(spec, action);
-  const verb = normalizeVerb(actionSpec?.label ?? action);
+  const actionLabel = actionSpec?.label ?? action;
+  const translatedActionLabel = action ? getToolLabel(`${key}.actions.${action}`, locale) : undefined;
+  const verb = normalizeVerb(translatedActionLabel ?? actionLabel);
 
   let detail: string | undefined;
   if (key === "read") detail = resolveReadDetail(params.args);
